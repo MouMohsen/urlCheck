@@ -1,5 +1,5 @@
-*URLCheck
-**Btach URL queue check service in PHP
+*URLCheck*
+**Btach URL queue check service in PHP**
 
 To Import Database :
 mysql -u root -proot urlcheck < urlcheck.sql
