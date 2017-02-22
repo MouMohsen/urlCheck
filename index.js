@@ -2,32 +2,27 @@ var express = require('express');
 var app = express();
 var mongodb = require('mongodb');
 var MongoClient = mongodb.MongoClient;
-var checkPriority = require('./checkPriority.js');
-var youtubeChecker = require('./youtubeChecker.js');
-
-//Configuration
-var databaseUrl = 'mongodb://localhost:27017/urlcheck';
-var collectionName = 'urls';
-var port = 8081;
+var checkPriority = require('./modules/checkPriority.js');
+var youtubeChecker = require('./modules/youtubeChecker.js');
+var config = require('./config.js');
 
 //Start Server
-var server = app.listen(port, function () {
+var server = app.listen(config.port, function () {
   var host = server.address().address
   var port = server.address().port
   console.log("urlCheck is listening at http://%s:%s", host, port)
-
 });
 
 
-MongoClient.connect(databaseUrl, function (err, db) {
+MongoClient.connect(config.databaseUrl, function (err, db) {
   if (err) {
     console.log('Unable to connect to the mongoDB server. Error:', err);
   } else {
-    console.log('Connection established to', databaseUrl);
+    console.log('Connection established to', config.databaseUrl);
 
     // Insert
     app.get('/insert', function (req, res) {
-      res.sendFile( __dirname + "/" + "insertURL.htm" );
+      res.sendFile( __dirname + "/html/" + "insertURL.htm" );
       response = {
         youtubeID:req.query.youtubeID,
         priority:parseInt(req.query.priority),
@@ -35,7 +30,7 @@ MongoClient.connect(databaseUrl, function (err, db) {
         lastResponse: 2 // Response 2 for Unchecked Videos, Remember 0 for unavailable, and 1 for available
       };
 
-      db.collection(collectionName).insert(response, function (err, result) {
+      db.collection(config.collectionName).insert(response, function (err, result) {
         if (err) {
           console.log(err);
         } else {
@@ -47,8 +42,8 @@ MongoClient.connect(databaseUrl, function (err, db) {
 
     //Run "Get"
     app.get('/run', function (req, res) {
-      res.sendFile( __dirname + "/" + "urlCheck.htm" );
-      var cursor = db.collection(collectionName).find();
+      res.sendFile( __dirname + "/html/" + "urlCheck.htm" );
+      var cursor = db.collection(config.collectionName).find();
       cursor.sort({"priority": 1, 'lastChecked': 1});
       cursor.skip(0);
 
@@ -64,7 +59,7 @@ MongoClient.connect(databaseUrl, function (err, db) {
               console.log(youtubeChecker(doc.youtubeID));
             }
 
-        }
+          }
         }
       });
     });
