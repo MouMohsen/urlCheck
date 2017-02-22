@@ -16,12 +16,12 @@ $json = json_decode($response,true);
 if (sizeof($json['items'])) {
     // video exists
 
-    echo ' <div>'.$videoID.' Video exists</div>';
+    echo ' <div>'.$videoID.' Video exists & DB ID = '.$id.'</div>';
     mysql_query("UPDATE urls SET response='available' WHERE id=".$id);
 
 } else {
     // video does not exist
-    echo ' <div>'.$videoID.' <b> Video does not exist</b><br>';
+    echo ' <div>'.$videoID.' <b> Video does not exist</b> & DB ID = '.$id.'<br>';
     mysql_query("UPDATE urls SET response='unavailable' WHERE id=".$id);
 
 }
