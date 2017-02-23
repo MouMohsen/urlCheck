@@ -15,12 +15,8 @@ Developed with NodeJS, Mongodb
 
 **MongoDB v3.4.2**
 
-### Installing depenedcies
-`npm install express`
-
-`npm install mongodb`
-
-`npm install request-json`
+### Installing dependencies
+Run `npm install` to install dependencies
 
 ### Configurations
 #### rename config-sample.js to config.js and provide the following
@@ -31,10 +27,9 @@ Developed with NodeJS, Mongodb
 
 ### QuickStart (Optional)
 **This would populate database with examples for Testing**
-- Run  `npm install -g node-mongo-seeds`
 - Run  `seed-setup` from the root of your project to generate a seed.json file
 - Replace `"localhost/LOCAL_DB_NAME"` with the path to your mongodb in your brand new seed.json file
-- Edit `collectionName` in config.js to `test`, Or Rename `test.json` to your `collectionName` 
+- Edit `collectionName` in config.js to `test`, Or Rename `test.json` to your `collectionName`
 - Run `seed`
 
 
