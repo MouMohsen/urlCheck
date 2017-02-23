@@ -63,4 +63,4 @@ The function *checkPriority()* takes to arguments *lastChecked* & *priority*
 ## youtubeChecker Module
 The function *youtubeChecker()* takes one argument *youtubeId*
 - Construct API call, to check if the video is available
-- Return True or False
+- Update URL entry in the database with currentDate (lastChecked Date) and response (1= Available & 0= Unavailable)
