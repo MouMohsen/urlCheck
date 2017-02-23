@@ -1,6 +1,19 @@
-# **URL Check Service Documentation**
+# **URL Check Batch Documentation**
 
 Developed with NodeJS, Mongodb
+### Overview
+**The batch can**
+- Receive YoutubeID and Priority and insert them to database.  
+- Determine which ID to check based on priority, last checked timestamp, and current time
+- Call Youtube API and Check if the video  is available or not
+- Update Database with Last Response and Last Check Timestamp
+
+### Prerequisites
+**NodeJS v6.9.4**
+
+**NPM 3.10.10**
+
+**MongoDB v3.4.2**
 
 ### Installing depenedcies
 `npm install express`
@@ -17,7 +30,7 @@ Developed with NodeJS, Mongodb
 `apikey` Youtube API Key retrieved from Google API
 
 
-### Starting Service
+### Starting Batch
 #### ```node index.js```
 
 
