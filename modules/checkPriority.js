@@ -5,8 +5,8 @@ module.exports = function(lastChecked,priority){
   var timeDiff = Math.abs(currentTime - lastChecked)
   var diffMintues = Math.ceil(timeDiff / (1000 * 60 ))
   if (diffMintues >= priorityMintues ) {
-    console.log(diffMintues)
-    console.log(priorityMintues)
+    // console.log(diffMintues)
+    // console.log(priorityMintues)
     return true
   }
   else {

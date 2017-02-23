@@ -26,7 +26,7 @@ module.exports = function (youtubeId,id){
           })
         }
         else {
-          console.log(id,'youtubeID',youtubeId,'available')
+          console.log(id,'youtubeID',youtubeId,'unavailable')
           db.collection(config.collectionName).update({_id:id},{$currentDate:{"lastChecked": true}, $set: {"lastResponse":0}},function (err, numUpdated) {
             if (err) {
               console.log(err)

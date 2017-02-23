@@ -1,0 +1,123 @@
+[
+  {
+    "youtubeID" : "Y1fAqdMn35g",
+    "priority" : 1,
+    "lastChecked" : {"$date":"2017-01-22T23:09:34.269Z"},
+    "lastResponse" : 2
+  },
+  {
+    "youtubeID" : "5O00LHnnpBA",
+    "priority" : 1,
+    "lastChecked" : {"$date":"2017-01-22T23:09:34.269Z"},
+    "lastResponse" : 2
+  },
+  {
+    "youtubeID" : "F4Zu5ZZAG7I",
+    "priority" : 2,
+    "lastChecked" : {"$date":"2017-01-22T23:09:34.269Z"},
+    "lastResponse" : 2
+  },
+  {
+    "youtubeID" : "KH1QL-MtsLM",
+    "priority" : 2,
+    "lastChecked" : {"$date":"2017-01-22T23:09:34.269Z"},
+    "lastResponse" : 2
+  },
+  {
+    "youtubeID" : "DPD3dk8hHV4",
+    "priority" : 3,
+    "lastChecked" : {"$date":"2017-01-22T23:09:34.269Z"},
+    "lastResponse" : 2
+  },
+  {
+    "youtubeID" : "36m1o-tM05g",
+    "priority" : 3,
+    "lastChecked" : {"$date":"2017-01-22T23:09:34.269Z"},
+    "lastResponse" : 2
+  },
+  {
+    "youtubeID" : "FYlzJc8aaC0",
+    "priority" : 4,
+    "lastChecked" : {"$date":"2017-01-22T23:09:34.269Z"},
+    "lastResponse" : 2
+  },
+  {
+    "youtubeID" : "KUWn_TJTrnU",
+    "priority" : 4,
+    "lastChecked" : {"$date":"2017-01-22T23:09:34.269Z"},
+    "lastResponse" : 2
+  },
+  {
+    "youtubeID" : "b-ZACvrlddM",
+    "priority" : 5,
+    "lastChecked" : {"$date":"2017-01-22T23:09:34.269Z"},
+    "lastResponse" : 2
+  },
+  {
+    "youtubeID" : "mY5RmKiE3Wi",
+    "priority" : 1,
+    "lastChecked" : {"$date":"2017-01-22T23:09:34.269Z"},
+    "lastResponse" : 2
+  },
+  {
+    "youtubeID" : "b_7hGtRSN01",
+    "priority" : 1,
+    "lastChecked" : {"$date":"2017-01-22T23:09:34.269Z"},
+    "lastResponse" : 2
+  },
+  {
+    "youtubeID" : "m0UmUY6BnTw",
+    "priority" : 1,
+    "lastChecked" : {"$date":"2017-01-22T23:09:34.269Z"},
+    "lastResponse" : 2
+  },
+  {
+    "youtubeID" : "m7mDm07sEn1",
+    "priority" : 2,
+    "lastChecked" : {"$date":"2017-01-22T23:09:34.269Z"},
+    "lastResponse" : 2
+  },
+  {
+    "youtubeID" : "DuMbDaTa_w0",
+    "priority" : 1,
+    "lastChecked" : {"$date":"2017-01-22T23:09:34.269Z"},
+    "lastResponse" : 2
+  },
+  {
+    "youtubeID" : "w0rNgInF0-2",
+    "priority" : 2,
+    "lastChecked" : {"$date":"2017-01-22T23:09:34.269Z"},
+    "lastResponse" : 2
+  },
+  {
+    "youtubeID" : "cA-TMaYn02a",
+    "priority" : 1,
+    "lastChecked" : {"$date":"2017-01-22T23:09:34.269Z"},
+    "lastResponse" : 2
+  },
+  {
+    "youtubeID" : "eJSik6ejkr0",
+    "priority" : 3,
+    "lastChecked" : {"$date":"2017-01-22T23:09:34.269Z"},
+    "lastResponse" : 2
+  },
+  {
+    "youtubeID" : "MuNg5-G6yKh",
+    "priority" : 1,
+    "lastChecked" : {"$date":"2017-01-22T23:09:34.269Z"},
+    "lastResponse" : 2
+  },
+  {
+    "youtubeID" : "QeBy6BhY-yh",
+    "priority" : 1,
+    "lastChecked" : {"$date":"2017-01-22T23:09:34.269Z"},
+    "lastResponse" : 2
+  },
+  {
+    "youtubeID" : "fInaLLinF0a",
+    "priority" : 2,
+    "lastChecked" : {"$date":"2017-01-22T23:09:34.269Z"},
+    "lastResponse" : 2
+  }
+
+]

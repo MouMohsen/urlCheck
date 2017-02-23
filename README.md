@@ -29,6 +29,14 @@ Developed with NodeJS, Mongodb
 `port` Port Number
 `apikey` Youtube API Key retrieved from Google API
 
+### QuickStart (Optional)
+**This would populate database with examples for Testing**
+- Run  `npm install -g node-mongo-seeds`
+- Run  `seed-setup` from the root of your project to generate a seed.json file
+- Replace `"localhost/LOCAL_DB_NAME"` with the path to your mongodb in your brand new seed.json file
+- Edit `collectionName` in config.js to `test`, Or Rename `test.json` to your `collectionName` 
+- Run `seed`
+
 
 ### Starting Batch
 #### ```node index.js```
