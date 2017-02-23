@@ -1,0 +1,21 @@
+{
+  "name": "urlcheck",
+  "version": "1.0.0",
+  "description": "urlCheck batch check for Youtube videos availability ",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.14.1",
+    "mongodb": "^2.2.24",
+    "request-json": "^0.6.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.kernel.blue:websites/urlcheck.git"
+  },
+  "author": "MouMohsen@KernelBlue",
+  "license": "ISC"
+}

@@ -7,7 +7,7 @@ var youtubeChecker = require('./modules/youtubeChecker.js')
 var config = require('./config.js')
 
 //Start Server
-var server = app.listen(config.port, function () {
+var server = app.listen(process.env.PORT || config.port, function () {
   var host = server.address().address
   var port = server.address().port
   console.log("urlCheck is listening at http://%s:%s", host, port)
