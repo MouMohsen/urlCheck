@@ -1,23 +1,29 @@
-request = require('request-json')
-config = require('../config.js')
+var google = require ('googleapis')
+var youtube = google.youtube ('v3')
+var config = require('../config.js')
 var mongodb = require('mongodb')
 var MongoClient = mongodb.MongoClient
-var client = request.createClient('https://www.googleapis.com/youtube/v3/')
-
+google.options ({ auth: config.apikey });
 module.exports = function (youtubeId,id){
-
-  client.get('videos/?part=id&id='+youtubeId+'&key='+config.apikey, function(err, res, body) {
+  var searchParams = {
+    part:             'id',
+    id:                youtubeId
+  };
+  youtube.videos.list (searchParams, function(err, body) {
+    if (err) {
+      console.log(err);
+      return;
+    }
     MongoClient.connect(config.databaseUrl, function (err, db) {
       if (err) {
         console.log('Unable to connect to the mongoDB server. Error:', err)
       } else {
         if (body.items.length) {
-          console.log(id,'youtubeID',youtubeId,'available')
           db.collection(config.collectionName).update({_id:id},{$currentDate:{"lastChecked": true}, $set: {"lastResponse":1}},function (err, numUpdated) {
             if (err) {
               console.log(err)
             } else if (numUpdated) {
-              console.log('Updated Successfully %d document(s).', numUpdated)
+              console.log(youtubeId+ 'is available >> ID '+ id)
             } else {
               console.log('No document found with defined "find" criteria!')
             }
@@ -26,12 +32,11 @@ module.exports = function (youtubeId,id){
           })
         }
         else {
-          console.log(id,'youtubeID',youtubeId,'unavailable')
           db.collection(config.collectionName).update({_id:id},{$currentDate:{"lastChecked": true}, $set: {"lastResponse":0}},function (err, numUpdated) {
             if (err) {
               console.log(err)
             } else if (numUpdated) {
-              console.log('Updated  %d document(s).', numUpdated)
+              console.log(youtubeId+ 'is unavailable >> ID '+ id)
             } else {
               console.log('No document found with defined "find" criteria!')
             }
