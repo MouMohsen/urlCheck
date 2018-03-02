@@ -1,8 +1,8 @@
-# **URL Check Batch Documentation**
+# **URL Checker Documentation**
 
 Developed with NodeJS, Mongodb
 ### Overview
-**The batch can**
+**The service can**
 - Receive YoutubeID and Priority and insert them to database.  
 - Determine which ID to check based on priority, last checked timestamp, and current time
 - Call Youtube API and Check if the video  is available or not
@@ -33,7 +33,7 @@ Run `npm install` to install dependencies
 - Run `seed`
 
 
-### Starting Batch
+### Starting Service
 #### ```node index.js```
 
 
